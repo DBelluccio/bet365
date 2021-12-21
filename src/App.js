@@ -6,6 +6,9 @@ import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 import Home from './Home';
 import HeaderSection from './components/header';
 import MatchesSection from './components/matches';
+import TeamsSection from './components/teams';
+import ContactHome from './components/contact';
+import FooterSection from './components/footer';
 import UpcomingMatches from './screens/upcomingMatches';
 import bootstrap from 'bootstrap';
 import reactDom from 'react-dom';
@@ -23,6 +26,9 @@ function App() {
   <React.Fragment>
     <HeaderSection />
     <MatchesSection />
+    <TeamsSection />
+    <ContactHome />
+    <FooterSection />
   </React.Fragment>
       <Routes>
         <Route path="/login" element={<LoginScreen />} />
