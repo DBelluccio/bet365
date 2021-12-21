@@ -35,6 +35,7 @@ function App() {
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/home" element={<Home />} />
         <Route path="/matches" element={<UpcomingMatches />} />
+        <Route path="/teams" element={<UpcomingMatches />} />
       </Routes>
       </main>
       </React.StrictMode>

@@ -26,11 +26,11 @@ function headerSection() {
                         </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                           <a class="nav-item nav-link" href="index.html">Home</a>
-                           <a class="nav-item nav-link" href="collection.html">Collection</a>
-                           <a class="nav-item nav-link" href="shoes.html">Shoes</a>
-                           <a class="nav-item nav-link" href="racing boots.html">Racing Boots</a>
-                           <a class="nav-item nav-link" href="contact.html">Contact</a>
+                           <a class="nav-item nav-link" href="/home">Home</a>
+                           <a class="nav-item nav-link" href="/matches">Partidos</a>
+                           <a class="nav-item nav-link" href="/teams">Equipos</a>
+                           <a class="nav-item nav-link" href="/events">Eventos</a>
+                           <a class="nav-item nav-link" href="/contact">Contactanos</a>
                            <a class="nav-item nav-link last" href="#"><img src={searchIcon}/></a>
                            <a class="nav-item nav-link last" href="contact.html"><img src={shopIcon} /></a>
                         </div>

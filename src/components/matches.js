@@ -1,24 +1,44 @@
-import React from "react";
+import React , { useState, useEffect } from "react";
+import axios from "axios";
 import shoes1 from "../images/shoes-img1.png";
 import starIcon from "../images/star-icon.png";
 import shoes2 from "../images/shoes-img2.png";
 import shoes3 from "../images/shoes-img3.png";
 
-function matchesSection () {
+function MatchesSection () {
+        const [games, setGames] = useState([]);
+        // 2 cree un estado para recibir la respuesta del endpoint de marvel
+      
+        useEffect(() => {
+            const fetchGames = async () => {
+              try {
+                const resp = await axios.get('https://betplay-365.herokuapp.com/api/v1/matches/');
+                console.log(resp);
+                setGames(resp.data);
+              } catch (error) {
+                console.log(error);
+              }
+            }
+            fetchGames();
+          }, []);
+      
+      
+        console.log(games);
+
     return (
         <div className="Main">
         <div className="layout_padding collection_section">
     	<div className="container">
     	    <h1 className="new_text"><strong>New  Collection</strong></h1>
     	    <p className="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-    	    <div className="collection_section_2">
+    	    {games.map((game) => (
+            <div className="collection_section_2">
     	    	<div className="row">
     	    		<div className="col-md-6">
     	    			<div className="about-img">
     	    				<button className="new_bt">New</button>
-    	    				<div className="shoes-img"><img src={shoes1} /></div>
-    	    				<p className="sport_text">Men Sports</p>
-    	    				<div className="dolar_text">$90 </div>
+    	    				<div className="shoes-img"><img src={game.urlImgTeam1} /></div>
+    	    				<p className="sport_text">{game.team1}</p>
     	    				<div className="star_icon">
     	    					<ul>
     	    						<li><a href="#"><img src={starIcon} /></a></li>
@@ -30,13 +50,12 @@ function matchesSection () {
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button className="seemore_bt">See More</button>
+    	    			<button className="seemore_bt">Apostar</button>
     	    		</div>
     	    		<div className="col-md-6">
     	    			<div className="about-img2">
-    	    				<div className="shoes-img2"><img src={shoes2} /></div>
-    	    				<p className="sport_text">Men Sports</p>
-    	    				<div className="dolar_text">$90 </div>
+    	    				<div className="shoes-img2"><img src={game.urlImgTeam2} /></div>
+    	    				<p className="sport_text">{game.team2}</p>
     	    				<div className="star_icon">
     	    					<ul>
                                 <li><a href="#"><img src={starIcon} /></a></li>
@@ -49,7 +68,8 @@ function matchesSection () {
     	    			</div>
     	    		</div>
     	    	</div>
-    	    </div>
+    	    </div> ))
+                }
     	</div>
     </div>
     <div className="collection_section">
@@ -84,4 +104,4 @@ function matchesSection () {
     )
 }
 
-export default matchesSection;
+export default MatchesSection;
