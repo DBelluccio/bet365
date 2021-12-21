@@ -371,19 +371,19 @@ body{
     
 }
 
-.collection_section{ width: 100%; float: left; padding-bottom: 0px; }
+.collection_section{ width: 100%; float: left; padding-bottom: 0px; background: #000;}
 .new_text{
 	width: 100%;
 	float: left;
 	font-size: 24pt;
-	color: #0c0116;
+    color: #ffda00;
 }
 
 .consectetur_text{
 	width: 100%;
 	float: left;
 	font-size: 14pt;
-	color: #0c0116;
+	color: #ffffff;
 	font-weight: 400;
 	margin-left: 0px;
     padding-bottom: 30px;

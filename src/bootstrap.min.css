@@ -4369,11 +4369,11 @@
    color: rgba(0, 0, 0, 0.9);
  }
  .navbar-light .navbar-nav .nav-link {
-   color: rgba(0, 0, 0, 0.5);
+   color: rgb(255, 255, 255);
  }
  .navbar-light .navbar-nav .nav-link:focus,
  .navbar-light .navbar-nav .nav-link:hover {
-   color: rgba(0, 0, 0, 0.7);
+   color: rgba(0, 255, 179, 0.7);
  }
  .navbar-light .navbar-nav .nav-link.disabled {
    color: rgba(0, 0, 0, 0.3);
@@ -9499,8 +9499,8 @@
    border-color: #484848;
  }
  .bg-light {
-   background-color: #fff !important;
-   border-color: #f2f2f2;
+   background-color: #fff0 !important;
+   border-color: #f2f2f200 !important;
  }
  .btn {
    border-style: solid;

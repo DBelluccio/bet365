@@ -46,3 +46,8 @@
     height: 50px;
   }
 }
+
+.layout_padding.collection_section {
+  background: #000;
+}
+

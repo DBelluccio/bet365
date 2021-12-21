@@ -26,7 +26,7 @@ function App() {
   <React.Fragment>
     <HeaderSection />
     <MatchesSection />
-    <TeamsSection />
+    {/* <TeamsSection /> */}
     <ContactHome />
     <FooterSection />
   </React.Fragment>
@@ -35,7 +35,7 @@ function App() {
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/home" element={<Home />} />
         <Route path="/matches" element={<UpcomingMatches />} />
-        <Route path="/teams" element={<UpcomingMatches />} />
+        <Route path="/teams" element={<TeamsSection />} />
       </Routes>
       </main>
       </React.StrictMode>
